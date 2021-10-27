@@ -10,7 +10,7 @@
 
 <body>
   <?php
-  // define variables and set to empty values
+  // deklarasi variable dengan isian kosong
   $namaErr = $emailErr = $genderErr = $websiteErr = "";
   $nama = $email = $gender = $comment = $website = "";
 
