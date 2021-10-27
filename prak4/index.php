@@ -105,6 +105,7 @@
     </table>
   </form>
 
+
   <?php
   if (isset($_POST['Submit'])) {
     $nama = $_POST['nama'];
@@ -120,21 +121,6 @@ VALUES('$nama','$email', '$website','$comment','$gender')");
     // menampilkan pesan berhasil
     echo "Data berhasil disimpan";
   }
-
-  // echo "<h2>Data yang anda isi:</h2>";
-  // echo $nama;
-  // echo "<br>";
-
-  // echo $email;
-  // echo "<br>";
-
-  // echo $website;
-  // echo "<br>";
-
-  // echo $comment;
-  // echo "<br>";
-
-  // echo $gender;
   ?>
 
 </body>
