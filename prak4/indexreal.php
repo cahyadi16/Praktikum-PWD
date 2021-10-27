@@ -63,7 +63,7 @@
 
   <p><span class="error">* Harus Diisi.</span></p>
 
-  <form method="post" action="tambah.php">
+  <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
     <table>
       <tr>
         <td>Nama:</td>
@@ -71,7 +71,6 @@
           <span class="error">* <?php echo $namaErr; ?></span>
         </td>
       </tr>
-
       <tr>
         <td>E-mail: </td>
         <td><input type="text" name="email">
@@ -100,41 +99,26 @@
         </td>
       </tr>
       <td>
-        <input type="submit" name="Submit" value="Submit">
+        <input type="submit" name="submit" value="Submit">
       </td>
     </table>
   </form>
 
   <?php
-  if (isset($_POST['Submit'])) {
-    $nama = $_POST['nama'];
-    $email = $_POST['email'];
-    $website = $_POST['website'];
-    $comment = $_POST['comment'];
-    $gender = $_POST['gender'];
-    // melakukan koneksi ke database
-    include_once("koneksi.php");
-    // query untuk menambahkan data ke database
-    $result = mysqli_query($con, "INSERT INTO data(nama,email,website,comment,gender)
-VALUES('$nama','$email', '$website','$comment','$gender')");
-    // menampilkan pesan berhasil
-    echo "Data berhasil disimpan";
-  }
+  echo "<h2>Data yang anda isi:</h2>";
+  echo $nama;
+  echo "<br>";
 
-  // echo "<h2>Data yang anda isi:</h2>";
-  // echo $nama;
-  // echo "<br>";
+  echo $email;
+  echo "<br>";
 
-  // echo $email;
-  // echo "<br>";
+  echo $website;
+  echo "<br>";
 
-  // echo $website;
-  // echo "<br>";
+  echo $comment;
+  echo "<br>";
 
-  // echo $comment;
-  // echo "<br>";
-
-  // echo $gender;
+  echo $gender;
   ?>
 
 </body>
