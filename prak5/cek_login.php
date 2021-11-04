@@ -1,5 +1,5 @@
 <?php
-include "../koneksi.php";
+include "koneksi.php";
 $id_user = $_POST['id_user'];
 $pass = md5($_POST['paswd']);
 $sql = "SELECT * FROM users WHERE id_user='$id_user' AND password='$pass'";

@@ -13,7 +13,7 @@ if (mysqli_num_rows($tampil) > 0) {
   $no = 1;
   while ($r = mysqli_fetch_array($tampil)) {
     echo "<tr><td>$no</td><td>$r[id_user]</td>
-<td>$r[nama]</td>
+<td>$r[id_user]</td>
 <td>$r[email]</td>
 <td><a href='hapus_user.php?id=$r[id_user]'>Hapus</a></td>
 </tr>";
