@@ -5,7 +5,7 @@ echo "<h2>Login</h2>
 <tr><td>Username</td><td> : <input name='id_user' type='text'></td></tr>
 <tr><td>Password</td><td> : <input name='paswd' type='text'></td></tr>
 <tr><td>Captcha<br>
-<img src='cap.php' /></td><td> : <input name='captcha_code' type='text'></td></tr>
+<img src='captcha.php' /></td><td> : <input name='captcha_code' type='text'></td></tr>
 <tr><td colspan=2><input type='submit' value='LOGIN'></td></tr>
 </table>
 </form>";
