@@ -1,5 +1,7 @@
 <?php
+// setting url
 $url = "http://localhost:8080/Praktikum-PWD/prak10/getdatamhs.php";
+
 $client = curl_init($url);
 curl_setopt($client, CURLOPT_RETURNTRANSFER, 1);
 $response = curl_exec($client);
